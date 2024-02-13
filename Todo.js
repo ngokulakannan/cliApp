@@ -64,7 +64,6 @@ const canFetchData = (id, constrainType) => {
 const getUrls = (limit, constrainType) => {
 
     const url = `https://jsonplaceholder.typicode.com/todos/`
-    let count = 0
     let MAX_ITER_LIMIT = 200 // todos api supprt only 200 todos
     let urls = []
 
