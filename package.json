@@ -1,0 +1,19 @@
+{
+  "name": "cliapp",
+  "version": "1.0.0",
+  "description": "The goal of the project is to build a command line tool.",
+  "main": "runTodo.js",
+  "scripts": {
+    "start": "node runTodo.js",
+    "test": "jest"
+  },
+  "author": "gokulakannan",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "jest": "^29.7.0"
+  },
+  "devDependencies": {
+   
+  }
+}
