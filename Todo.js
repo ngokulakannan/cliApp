@@ -32,6 +32,10 @@ const printTodo = (data) => {
     console.log("-----------------------------------------")
 }
 
+/**
+ * Prints the details of todos in the given list.
+ * @param {object[]} todoList - An array of todo objects containing details to be printed.
+ */
 const printTodos = (todoList) =>{
     todoList.forEach(todo=>{
         printTodo(todo)
@@ -39,7 +43,12 @@ const printTodos = (todoList) =>{
 }
 
 
-
+/**
+ * Determines if data can be fetched based on the given ID and constraint type.
+ * @param {number} id - The ID to be checked.
+ * @param {string} constrainType - The constraint type to be applied ('EVEN' or 'ODD').
+ * @returns {boolean} - Returns true if data can be fetched, otherwise false.
+ */
 const canFetchData = (id, constrainType) => {
 
     switch (constrainType) {
@@ -61,6 +70,12 @@ const canFetchData = (id, constrainType) => {
     }
 }
 
+/**
+ * Generates a list of URLs based on the given limit and constraint type.
+ * @param {number} limit - The maximum number of URLs to generate.
+ * @param {string} constrainType - The constraint type to be applied ('EVEN' or 'ODD').
+ * @returns {string[]} - An array of URLs generated based on the limit and constraint type.
+ */
 const getUrls = (limit, constrainType) => {
 
     const url = `https://jsonplaceholder.typicode.com/todos/`
@@ -80,6 +95,11 @@ const getUrls = (limit, constrainType) => {
 }
 
 
+/**
+ * Fetches data from multiple URLs in batches and returns the results.
+ * @param {string[]} urls - An array of URLs to fetch data from.
+ * @returns {Promise<any[]>} - A promise that resolves to an array of data fetched from the URLs.
+ */
 const getData = async (urls) => {
 
     let totalUrls = urls.length
@@ -117,7 +137,9 @@ const getData = async (urls) => {
     return results;
 }
 
-
+/**
+ * Executes the program to fetch todo data, process it, and print details of todos with even IDs.
+ */
 const run = async()=>{
     let urlList = getUrls(100,constrainTypes.EVEN);
     let todoList = await  getData(urlList)
