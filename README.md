@@ -1,4 +1,4 @@
-# TODO Application 
+# Api ingestion Application 
 
 In this application data is fetched from ToDo apis. It can be configured to get ids with EVEN numbers or ODD numbers or can be extended to have palindrome or other series.
 
